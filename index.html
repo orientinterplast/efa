@@ -25,7 +25,7 @@
   </head>
   <body>
 
-    <div style="background-image: url('img/paris.jpg')" class="main"> 
+    <div style="background-image: url('img/paris.jpg');" class="main"> 
       
       <div class="overlay"></div>
 
@@ -33,22 +33,35 @@
 <div class="col-md-6">
               <p class="credit"><img src="img/logo.png"></p>
             </div>
-        <p class="social"><a href="http://www.facebook.com/EmergencyFirstAidIndia/" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="mailto:emergencyfirstaid13@gmail.com" title="" class="gplus"><i class="fa fa-envelope"></i></a><a href="http://www.facebook.com/EmergencyFirstAidIndia/photos" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
+        <p class="social"><a href="http://www.facebook.com/EmergencyFirstAidIndia/" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="mailto:hello@emergencyfirstaid.in" title="" class="gplus"><i class="fa fa-envelope"></i></a><a href="http://www.facebook.com/EmergencyFirstAidIndia/photos" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
+        <div class="mailing-list">
         <h1 class="cursive">Emergency First Aid India</h1>
         <h2 class="sub">A CSR initiative by Orient Enterprises </h2>
-        <div class="mailing-list">
+        
+        <p align="center"><a href="#testimonials"><img src="img/testimonials.png" width="200 px"></a></p>
           <h5 class="mailing-list-heading">An initiative to create an impact on society so that people <br>can take better actions in cases of emergencies and help save lives. </h5>
-          <div class="row">
-            <form class="form-inline" action="https://formspree.io/efaindia13@gmail.com" method="POST">
+          <div class="row" style="padding:10px">
+            <form class="form-inline">
               <div class="form-group">
                 <label for="emaialign: left">
-                <input type="email" placeholder="jane.doe@example.com" id="email" class="form-control transparent" name="Enquiry From">
+                <input id="to" type="email" placeholder="jane.doe@example.com" class="form-control transparent">
               </div>
-              <button class="btn btn-danger">Send Enquiry </button>
+              <button id="send_email" class="btn btn-danger">Send Enquiry </button>
             </form>
           </div>
         </div>
+
+        <div class="testimonials" id="testimonials">
+    <p>
+    <img src="img/happy.png">
+    </p>
+    </div> 
+
       </div>
+
+
+      
+
       <div class="footer">
         <div class="container">
           <div class="row">
@@ -61,21 +74,40 @@
           </div>
         </div>
       </div>
+
+ 		
+
     </div>
+
+    <!--Testimonials-->
+    
+
+
+
     <!-- JAVASCRIPT FILES -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.11.0.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src="js/front.js"></script>
+    <script src="js/script.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
-    <!--<script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>-->
+
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
   </body>
 </html>
